@@ -1,8 +1,8 @@
 // Automatisch erzeugt von scripts/pwa.mjs. Hält alle Dateien der App für den Offline-Betrieb vor.
-const CACHE = 'mitarbeitsnoten-d31038fd0f70';
+const CACHE = 'mitarbeitsnoten-eed4b809f5a2';
 const DATEIEN = [
   "./",
-  "./_expo/static/js/web/index-4ec9a6eaf6fd3564cc99610e6a2982cc.js",
+  "./_expo/static/js/web/index-5658270ef17c7b1c02b7ae34c98a6350.js",
   "./apple-touch-icon.png",
   "./favicon.ico",
   "./icon-192.png",
