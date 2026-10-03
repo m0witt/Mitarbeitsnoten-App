@@ -1,8 +1,8 @@
 // Automatisch erzeugt von scripts/pwa.mjs. Hält alle Dateien der App für den Offline-Betrieb vor.
-const CACHE = 'mitarbeitsnoten-19ccc3017ebb';
+const CACHE = 'mitarbeitsnoten-78f4646064bc';
 const DATEIEN = [
   "./",
-  "./_expo/static/js/web/index-29b08373f98cd5d5f1f0ff2cf4373e2e.js",
+  "./_expo/static/js/web/index-329519664a35d6c65c552e55d814df1e.js",
   "./apple-touch-icon.png",
   "./favicon.ico",
   "./icon-192.png",
@@ -12,8 +12,10 @@ const DATEIEN = [
   "./sw-registrierung.js"
 ];
 
+// cache: 'reload' umgeht den Browser-Zwischenspeicher. Sonst landet nach einem schnellen Update
+// eine alte index.html im neuen Speicher, die auf eine nicht mehr vorhandene Datei zeigt (weißer Bildschirm).
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(DATEIEN)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(DATEIEN.map((u) => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (e) => {
