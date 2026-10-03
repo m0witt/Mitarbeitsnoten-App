@@ -1,5 +1,5 @@
 // Automatisch erzeugt von scripts/pwa.mjs. Hält alle Dateien der App für den Offline-Betrieb vor.
-const CACHE = 'mitarbeitsnoten-cd8de90f5114';
+const CACHE = 'mitarbeitsnoten-b7e5fa7f5ad5';
 const DATEIEN = [
   "./",
   "./_expo/static/js/web/index-be84ba54c133fd7a9bd89310e6994e17.js",
